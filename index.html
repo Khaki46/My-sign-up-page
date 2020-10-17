@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link rel="icon" href="image/ice.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="myjs.js"></script>
 </head>
 <body>
     <div class="box">
-        <div class="title">https://github.com/Khaki46/My-sign-up-page.git
+        <div class="title">
             <h2>Study sign up page</h2>
-            <p id="boxp">Hey you click this <a id="atouch" onclick="atouch()" href="">Touch me</a></p>
+            <p id="boxp">Hey you look at this <a id="atouch" onclick="atouch()" href="">Touch me</a></p>
         </div>
         <div class="content">
             <table>
                 <tr>
                     <td>Username</td>
-                    <td><input class="incss" type="text" placeholder="Username">
+                    <td><input class="incss" type="text" placeholder="Username" onkeyup="keyname()">
                     </td>                
                 </tr>
                 <tr>
@@ -26,7 +27,7 @@
                 </tr>
                 <tr>
                     <td>Number</td>
-                    <td><input class="incss" type="text" placeholder="UserPhonenumber"></td>
+                    <td><input class="incss" type="text" placeholder="UserPhonenumber" onkeyup="keyphonenumber()"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -34,7 +35,7 @@
             </tr>
                 <tr>
                     <td>Password</td>
-                    <td><input class="incss" type="text" placeholder="Password"></td>
+                    <td><input class="incss" type="password" placeholder="Password" onkeyup="keypassword()"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -43,7 +44,8 @@
                 <tr>
                     <td>Code</td>
                     <td colspan="2"><input id="setcode" class="incss2" type="text" placeholder="Code">
-                        <button class="getbtn" id="getcodebtn" onclick="getcode()">Get the code</button>
+                        <!-- <button class="getbtn" id="getcodebtn" onclick="time(this)" value="get the code">Get the code</button> -->
+                        <input type="button" class="getbtn" value="Get the code" onclick="time(this),getcode()" >
                     </td>
                 </tr>
                 <tr>
