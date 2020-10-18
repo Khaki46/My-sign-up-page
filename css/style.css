@@ -1,9 +1,9 @@
-body{background-image: url(image/64570233_p0.jpg);background-attachment:fixed;background-size: cover;}
+body{background-image: url(../image/indexbg.jpg);background-attachment:fixed;background-size: cover;}
 .box{background-color: rgb(241, 241, 241,0.7);width: 470px;min-width: 470px;height: 550px;;border-radius: 10px;float: right;margin-top: 5%;margin-right: 10%;line-height: 10px;}
 .title{padding-left: 30px;padding-top: 30px;}
 .content{padding-left: 40px;}
 .bottom{width: 80%;margin: 0 auto;}
-.btnsign{background-color: rgb(98, 174, 240);outline: none;border: 0px;width: 100%;height: 40px;border-radius: 15px;font-size: 16px;}
+.btnsign{background-color: rgb(136, 194, 245);outline: none;border: 0px;width: 100%;height: 40px;border-radius: 15px;font-size: 16px;}
 .incss{width: 260px;height: 35px;border: 0px;}
 .incss2{width: 165px;height: 35px;border: 0px;}
 .getbtn{height: 37px;background-color: white;border: 0px;}

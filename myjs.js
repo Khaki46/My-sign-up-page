@@ -4,6 +4,7 @@ var numberSet;
 var passwordSet;
 var codeSet;
 var checkSet;
+
 function getcode(){
     var codeNum = Math.random().toString().slice(-4);
     num=codeNum;
@@ -80,29 +81,12 @@ function keypassword(){
         }
 }
 function finish(){
-    var getInputName = document.getElementsByTagName("input")[0].value;
-    var getInputNumber = document.getElementsByTagName("input")[1].value;
-    var getInputPassword = document.getElementsByTagName("input")[2].value;
-    if (!getInputName){
-        document.getElementsByTagName("span")[0].innerHTML="Hey your name";
-        document.getElementsByTagName("span")[0].style.visibility="visible";
-        nameSet=false;
-    }
-    if (!getInputNumber){
-        document.getElementsByTagName("span")[1].innerHTML="You number guys";
-        document.getElementsByTagName("span")[1].style.visibility="visible";
-        numberSet=false;
-    }
-    if (!getInputPassword){
-        document.getElementsByTagName("span")[2].innerHTML="Enter your password";
-        document.getElementsByTagName("span")[2].style.visibility="visible";        
-        passwordSet=false;
-    }
     // code
     var getInputCode = document.getElementsByTagName("input")[3].value;
     if (!getInputCode){
         document.getElementsByTagName("span")[3].style.visibility="visible";
         codeSet=false;
+        return false;
     }else
     if(getInputCode==num){
         codeSet=true;
@@ -110,10 +94,11 @@ function finish(){
     }else{
         codeSet=false;
         document.getElementsByTagName("span")[3].innerHTML="Code is wrong";
-        document.getElementsByTagName("span")[3].style.visibility="visible";        
+        document.getElementsByTagName("span")[3].style.visibility="visible";   
+        return false;     
     }
-    var check = document.getElementsByTagName("input")[5];  
-    console.log(check.checked);  
+
+    var check = document.getElementsByTagName("input")[6];  
     if (check.checked==true){
         document.getElementById("haha").style.visibility="hidden";
         checkSet=true;
@@ -123,14 +108,34 @@ function finish(){
     }
 
     if (nameSet==true&&numberSet==true&&passwordSet==true&&codeSet==true&&checkSet==true){
-        alert("Welcome you get a account!")
+        alert("Welcome you get a account!\nClick on the OK button to go to the login page!")
+        // window.setTimeout(go, 0);
+        // function go(){
+		// 	location.href="login.html"; 
+		// }
     }else{
         console.log("sb");
     }
 }
+
 function checkidi(){
-    var check = document.getElementsByTagName("input")[5];
+    var check = document.getElementsByTagName("input")[6];
     if(check.checked==true){
         document.getElementById("haha").style.visibility="hidden";
+        checkSet=true;
+    }else{
+        document.getElementById("haha").style.visibility="visible";       
+        checkSet=false; 
     }
 }
+
+setTimeout(go, 1000);
+        function go(){
+            if (nameSet==true&&numberSet==true&&passwordSet==true&&checkSet==true){
+                btnsign.removeAttribute("disabled");
+                document.getElementById("btnsign").style.backgroundColor='rgb(56, 154, 240)';
+                }else{
+                    setTimeout(go, 100);
+
+                }
+            }

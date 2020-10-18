@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="icon" href="image/ice.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="myjs.js"></script>
 </head>
 <body>
@@ -15,10 +15,11 @@
             <p id="boxp">Hey you look at this <a id="atouch" onclick="atouch()" href="">Touch me</a></p>
         </div>
         <div class="content">
+            <form action="login.html" method="get">
             <table>
                 <tr>
                     <td>Username</td>
-                    <td><input class="incss" type="text" placeholder="Username" onkeyup="keyname()">
+                    <td><input class="incss" name="username" type="text" placeholder="Username" onkeyup="keyname()">
                     </td>                
                 </tr>
                 <tr>
@@ -27,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>Number</td>
-                    <td><input class="incss" type="text" placeholder="UserPhonenumber" onkeyup="keyphonenumber()"></td>
+                    <td><input class="incss" name="number" type="text" placeholder="UserPhonenumber" onkeyup="keyphonenumber()"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -35,7 +36,7 @@
             </tr>
                 <tr>
                     <td>Password</td>
-                    <td><input class="incss" type="password" placeholder="Password" onkeyup="keypassword()"></td>
+                    <td><input class="incss" name="password" type="password" placeholder="Password" onkeyup="keypassword()"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -55,11 +56,14 @@
             </table>
         </div>
         <div class="bottom">
-            <button class="btnsign" onclick="finish()">Sign up</button><br/>
+            <!-- <button class="btnsign" onclick="finish()">Sign up</button><br/> -->
+            <input type="submit" class="btnsign" id="btnsign" disabled="disabled" onclick="return finish()" value="Sign up">
             <input style="margin:20px;margin-left:  30px;" type="checkbox" name="" id="" onclick="checkidi()"> 
             <p class="checkp" id="idcheck">If you want to sign up click this
                 <br><span style="margin-left: 120px;font-size: 16px;" id="haha">Agree with this</span></p>
         </div>
+    </form>
+
     </div>
     <script>
         function atouch(){
