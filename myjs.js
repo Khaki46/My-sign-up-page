@@ -95,6 +95,7 @@ function finish(){
         codeSet=false;
         document.getElementsByTagName("span")[3].innerHTML="Code is wrong";
         document.getElementsByTagName("span")[3].style.visibility="visible";   
+        console.log("codesetfalse");
         return false;     
     }
 
@@ -122,10 +123,16 @@ function checkidi(){
     var check = document.getElementsByTagName("input")[6];
     if(check.checked==true){
         document.getElementById("haha").style.visibility="hidden";
+        btnsign.removeAttribute("disabled");
+        document.getElementById("btnsign").style.backgroundColor='rgb(56, 154, 240)';
         checkSet=true;
-    }else{
+    }
+    if(check.checked==false){
         document.getElementById("haha").style.visibility="visible";       
         checkSet=false; 
+        document.getElementById("btnsign").style.backgroundColor='rgb(136, 194, 245)';
+        btnsign.setAttribute("disabled", "true");//ban the button
+
     }
 }
 
