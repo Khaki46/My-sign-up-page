@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="image/login.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
-    <script>
-      function teou(){
-        var
-
-      }
-    </script>
     <script>
       // copy code
         function getPar(par){
@@ -28,14 +23,41 @@
         return get_par;
       }
   </script>
+  <script src="js/login.js"></script>
 </head>
-<body>
 
-    <script>
-        document.write('Name:<h1>'+getPar('name')+'</h1>');
-        document.write('Number:<h1>'+getPar('number')+'</h1>');
-        document.write('Password:<h1>'+getPar('password')+'</h1>');
-    </script>
-    
+<body style="background-image: url(../image/loginbg.jpg);background-attachment:fixed;background-size: cover;">
+    <div class="loginbox">
+      <div class="title">
+          <h2>Study Login in page</h2>
+      </div>
+      <div class="content">
+          <table>
+              <tr>
+                  <td>Username</td>
+                  <td><input class="incss" name="username" type="text" placeholder="Username" onkeyup="keyName()">
+                  </td>                
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><span id="errorname">Hey Username</span></td>
+              </tr>
+              <tr>
+                  <td>Password</td>
+                  <td><input class="incss" name="password" type="password" placeholder="Password" onkeyup="keyPassword()"></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><span id="errorpw">Enter your password</span></td>
+              </tr>
+          </table>
+      </div>
+      <div class="bottom">
+          <input type="submit" class="btnlogin" id="btnlogin" onclick="login()" value="Login in">
+          <br><span style="margin-left: 75px;font-size: 16px;line-height: 70px;">Usernaem or Password is wrong</span></p>
+      </div>
+  </div>
+
+
 </body>
 </html>

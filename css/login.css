@@ -1,1 +1,2 @@
-body{background-image: url(../image/loginbg.jpg);background-attachment:fixed;background-size: cover;}
+.loginbox{background-color: rgb(241, 241, 241,0.7);width: 470px;min-width: 470px;height: 350px;;border-radius: 10px;float: left;margin-top: 8%;margin-left: 5%;line-height: 10px;}
+.btnlogin{background-color: rgb(56, 154, 240);outline: none;border: 0px;width: 100%;height: 40px;border-radius: 15px;font-size: 16px;}

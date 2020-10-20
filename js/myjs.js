@@ -123,16 +123,17 @@ function checkidi(){
     var check = document.getElementsByTagName("input")[6];
     if(check.checked==true){
         document.getElementById("haha").style.visibility="hidden";
+        if (nameSet==true&&numberSet==true&&passwordSet==true){
         btnsign.removeAttribute("disabled");
         document.getElementById("btnsign").style.backgroundColor='rgb(56, 154, 240)';
         checkSet=true;
+        }
     }
     if(check.checked==false){
-        document.getElementById("haha").style.visibility="visible";       
         checkSet=false; 
         document.getElementById("btnsign").style.backgroundColor='rgb(136, 194, 245)';
         btnsign.setAttribute("disabled", "true");//ban the button
-
+        
     }
 }
 

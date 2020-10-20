@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="image/ice.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/myjs.js"></script>
+</head>
+<body style="background-image: url(../image/indexbg.jpg);background-attachment:fixed;background-size: cover;">
+    <div class="box">
+        <div class="title">
+            <h2>Study sign up page</h2>
+            <p id="boxp">Hey you look at this <a id="atouch" onclick="atouch()" href="">Touch me</a></p>
+        </div>
+        <form action="login.html" method="get">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input class="incss" name="username" type="text" placeholder="Username" onkeyup="keyname(),checkidi()">
+                    </td>                
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="errorname">Hey your name</span></td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td><input class="incss" name="number" type="text" placeholder="UserPhonenumber" onkeyup="keyphonenumber(),checkidi()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="errorph">You number guys</span></td>
+            </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input class="incss" name="password" type="password" placeholder="Password" onkeyup="keypassword(),checkidi()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="errorpw">Enter your password</span></td>
+                </tr>
+                <tr>
+                    <td>Code</td>
+                    <td colspan="2"><input id="setcode" class="incss2" type="text" placeholder="Code">
+                        <input type="button" class="getbtn" value="Get the code" onclick="time(this),getcode()" >
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="errorcode">Where is your code?</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom">
+            <input type="submit" class="btnsign" id="btnsign" disabled="disabled" onclick="return finish()" value="Sign up">
+            <input style="margin:20px;margin-left:  30px;" type="checkbox" name="" id="" onclick="checkidi()"> 
+            <p class="checkp" id="idcheck">If you want to sign up click this
+                <br><span style="margin-left: 120px;font-size: 16px;" id="haha">Agree with this</span></p>
+        </div>
+    </form>
+
+    </div>
+    <script>
+        function atouch(){
+            alert("Don't touch me");
+        }
+        
+    </script>
+</body>
+</html>
